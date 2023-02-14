@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { minusculoValidator } from './minusculo.validator';
 import { NovoUsuario } from './novo-usuario';
@@ -13,10 +13,10 @@ import { usuarioSenhaIguaisValidator } from './usuario-senha-iguais.validator';
   styleUrls: ['./novo-usuario.component.css'],
 })
 export class NovoUsuarioComponent implements OnInit {
-  novoUsuarioForm!: FormGroup;
+  novoUsuarioForm!: UntypedFormGroup;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private novoUsuarioService: NovoUsuarioService,
     private usuarioExistenteServive: UsuarioExisteService,
     private router: Router
