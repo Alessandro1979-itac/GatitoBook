@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
 import { minusculoValidator } from './minusculo.validator';
 import { NovoUsuario } from './novo-usuario';
 import { NovoUsuarioService } from './novo-usuario.service';
@@ -35,7 +34,9 @@ export class NovoUsuarioComponent implements OnInit {
         ],
         password: [''],
       },
-      { validators: [usuarioSenhaIguaisValidator] }
+      {
+        validators: [usuarioSenhaIguaisValidator],
+      }
     );
   }
 
