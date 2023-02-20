@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetalheAnimalComponent } from './detalhe-animal/detalhe-animal.component';
 import { ListaAnimaisComponent } from './lista-animais/lista-animais.component';
 import { ListaAnimaisResolver } from './lista-animais/lista-animais.resolver';
+import { NovoAnimalComponent } from './novo-animal/novo-animal.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
     component: ListaAnimaisComponent,
     resolve: { animais: ListaAnimaisResolver },
   },
+  { path: 'novo', component: NovoAnimalComponent },
   { path: ':animalId', component: DetalheAnimalComponent },
 ];
 
