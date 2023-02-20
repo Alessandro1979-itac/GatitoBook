@@ -40,7 +40,7 @@ api.addUpload = async (req, res) => {
 
   const image = await jimp.read(req.file.path);
 
-  await image.exifRotate().cover(460, 460).autocrop().write(req.file.path);
+  await image.cover(460, 460).autocrop().write(req.file.path);
 
   const photo = req.body;
   photo.url = path.basename(req.file.path);
